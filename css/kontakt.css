@@ -61,6 +61,15 @@ input[type="submit"]:hover{
 	color: white;
 }
 
+
+#map_canvas {
+	position: relative;
+	top: 5em;
+	width: 100%;
+	height: 400px;
+}
+
+
 @media all and (min-width: 910px) {
 	.contact-form form {
 		width: 850px;

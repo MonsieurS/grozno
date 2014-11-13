@@ -7,13 +7,14 @@
 	width: 100%;
 	height: auto;
 	text-align: center;
+	margin-top: 30px;
 }
 
 .product-list li {
 	display: inline-block;
-	width: 300px;
+	width: 250px;
 	height: auto;
-	margin: 20px;
+	margin: 0 20px 20px 0;
 	border:1px solid rgba(50, 50, 50, 0.2);
 	padding: 20px;
 	box-shadow: none;
@@ -42,4 +43,9 @@
 	height: auto;
 }
 
-@media all and (min-width: 910px) {}
+@media all and (min-width: 735px) {
+	.product-list li {
+		margin:20px;
+		width: 300px;
+	}
+}
