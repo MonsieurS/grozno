@@ -1,0 +1,45 @@
+.products {
+	width: 100%;
+	height: auto;
+}
+
+.product-list {
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+.product-list li {
+	display: inline-block;
+	width: 300px;
+	height: auto;
+	margin: 20px;
+	border:1px solid rgba(50, 50, 50, 0.2);
+	padding: 20px;
+	box-shadow: none;
+	transition: border 150ms ease,
+				box-shadow 150ms ease;
+}
+
+.product-list li:hover {
+	box-shadow: 0px 0px 5px 0px  rgba(219,177,91, 0.7);
+	border:  1px solid rgba(219,177,91, 0.4);
+}
+
+.product-list li figcaption {
+	text-align: left;
+	color: #504f50;
+}
+
+.img-box {
+	width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+.img-box img {
+	width: 100%;
+	height: auto;
+}
+
+@media all and (min-width: 910px) {}

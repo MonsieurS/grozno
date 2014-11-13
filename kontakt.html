@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Parfumeria</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/navigacija.css">
+		<link rel="stylesheet" type="text/css" href="css/footer.css">
+		<link rel="stylesheet" type="text/css" href="css/kontakt.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+		<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+		<!-- Google fonts - "Open Sans" -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+		<!-- jQuery source -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</head>
+	<body>
+
+		<navigation>
+			<div class="navigation">
+				<div class="mobile-header">
+					<div class="open-menu-icon"> <i class="fa fa-ellipsis-h fa-4x"></i></div>
+					<div class="logo">Parfumeria</div>
+					<div class="empty-div"></div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="navigation-wrapper">
+					<div class="navigation-links">
+						<ul><!--
+							--><a href="index.html"><li>Proizvodi</li></a><!--
+							--><a href="#"><li>Blog</li></a><!--
+							--><a href="#"><li>Galerija</li></a><!--s
+							--><a href="kontakt.html"><li>Kontakt</li></a><!--
+							-->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</navigation>
+
+		<content>
+		<div class="wrapper">
+							<h1>
+			      <span id="left"></span>
+			      <span id="center">Kontaktirajte nas</span>
+			      <span id="right"></span>
+  				</h1>
+			<div class="contact-form">
+
+				<form method="post" action="mail.php" enctype="text/plain">
+					<ul><!--
+						--><li>
+							<input type="name" name="ime"  placeholder="Vaše ime i prezime"  required><br/>
+							<input type="email" id="email" name="email" placeholder="Email@mail.com" required>
+							</li><!--
+						--><li><textarea name="poruka"  placeholder="Unesite Vašu poruku.."  required></textarea></li><!--
+						-->
+						</ul>
+						<br/>
+						<input type="submit" name="submit"  value="Pošalji" class="submit">
+					
+				</form>
+			</div>
+		</div>
+			
+		</content>
+
+		<footer>
+			<div class="footer">
+				<div class="footer-wrapper">
+						<div class="social-media">
+							<h2>follow us!</h2>
+							<ul><!--
+								--><a href=""><li><i class="fa fa-facebook fa-3x"></i></li></a><!--
+								--><a href=""><li><i class="fa fa-google-plus fa-3x"></i></li></a><!--
+								--><a href=""><li><i class="fa fa-twitter fa-3x"></i></li></a><!--
+								-->
+							</ul>
+						</div>
+						<div class="newsletter">
+							<h2>newsletter</h2>
+							<form>
+								<input type="email" name="email" placeholder="Vaš email.."><br/>
+								<input type="submit" value="Prijavi se">
+							</form>
+						</div>
+				</div>
+					
+
+				<p><i class="fa fa-copyright"></i>2014 Parfumeria. Sva prava privržena.</p>
+		</footer>
+
+
+
+
+
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			$('.open-menu-icon').click(function(){
+			  $('.navigation-links').toggleClass('navigation-links-translate');
+			});
+		});
+
+	</script>
+	</body>
+</html>

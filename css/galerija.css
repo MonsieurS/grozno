@@ -1,0 +1,46 @@
+.gallery {
+	width: 100%;
+	height: auto;
+}
+
+.gallery ul li {
+	display: inline-block;
+	width: calc(100%/2 - 4px);
+	height: 100px;
+	margin:5px;
+	background-color: red;
+	transition: width 200ms ease;
+}
+
+@media all and (min-width: 400px) {
+	.gallery ul li {
+		display: inline-block;
+		width: calc(100%/3 - 6px);
+		height: 100px;
+		margin:2px;
+		background-color: red;
+	}
+} 
+
+@media all and (min-width: 630px) {
+	.gallery ul li {
+		display: inline-block;
+		width: calc(100%/4 - 8px);
+		height: 100px;
+		margin:2px;
+		background-color: red;
+	}
+} 
+
+
+@media all and (min-width: 910px) {
+
+	.gallery ul li {
+		display: inline-block;
+		width: calc(100%/4 - 10px);
+		height: 200px;
+		margin:5px;
+		background-color: red;
+	}
+
+}

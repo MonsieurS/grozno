@@ -1,0 +1,160 @@
+.mobile-header {
+	width:100%;
+	height: 50px;
+	position: fixed;
+	background-color: white;
+	box-shadow: 0px 0 3px grey;
+	z-index: 5;
+}
+
+.open-menu-icon {
+	width: 20%;
+	height: auto;
+	float: left;
+	text-align: center;
+}
+
+.open-menu-icon i {
+	line-height: 50px;
+}
+
+.logo {
+	width: 60%;
+	height:100%;
+	text-align: center;
+	float: left;
+	text-align: center;
+	line-height: 45px;
+	font-variant: small-caps;
+	font-size: 3em;
+	color:  #DBB15B;
+	text-shadow: 0px 1px #af8d48;
+}
+
+.empty-div {
+	width: 20%;
+	height:100%;
+	float: right;
+}
+
+.navigation-wrapper {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgba(0,0,0,0.0);
+	z-index: -5;
+	cursor: pointer;
+	transform:translate(-100%,0);
+}
+
+.navigation-links {
+	width: 180px;
+	height: calc(100% - 50px);
+	position: fixed;
+	bottom: 0;
+	transform:translate(-100%,0); 
+	z-index: 100;
+	cursor: auto;
+}
+
+ .navigation-links-translate {
+	transfrom:translate(0,0) !important;
+}
+
+.navigation-links ul {
+	width: 100%;
+	height: auto;
+	padding-top: 40px;
+}
+
+.navigation-links ul li {
+	width: calc(100% - 10px);
+	height: auto;
+	padding: 10px 0px;
+	margin: 0 10px;
+	font-size: 1.5em;
+	border-bottom: 1px solid grey;
+	color: #504f50;
+	transition: color 100ms ease;
+}
+
+.navigation-links ul li:hover {
+	color: #dbb15b;
+}
+
+
+@media all and (min-width: 910px) {
+	.navigation{
+		width: 100%;
+		height: 60px;
+		background-color: white;
+		box-shadow: 2px 0 3px grey;
+		position: fixed;
+		z-index: 10000;
+	}
+
+	.mobile-header {
+		width: 50%;
+		height: 100%;
+		position: static;
+		float: left;
+		box-shadow: none;
+	}
+
+	.open-menu-icon {
+		display: none;
+	}
+
+	.logo {
+		width: 100%;
+		line-height: 60px;
+	}
+
+	.empty-div {
+		display: none;
+	}
+
+	.navigation-wrapper {
+		width:50%;
+		height: 100%;
+		position: static;
+		background-color: transparent;
+		float: right;
+		margin-right: 0;
+		transform:translate(0,0);
+		transition: width 200ms ease, margin-right 200ms ease;
+
+	}
+
+	.navigation-links {
+		width: 100%;
+		height: 100%;
+		position: static;
+		display: inline-block;
+		text-align: center;
+		transform:translate(0,0);
+	}
+
+	.navigation-links ul {
+		width: auto;
+		height: auto;
+		padding: 0;
+		line-height: 60px;
+	}
+
+	.navigation-links ul li {
+		display: inline-block;
+		width: auto;
+		padding: 0;
+		border: none;
+		margin:0 20px;
+	}
+
+}
+
+@media all and (min-width:1120px) {
+	.navigation-wrapper {
+		width: calc(50% - 150px);
+		margin-right: 150px;
+	}
+}
