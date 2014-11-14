@@ -30,11 +30,10 @@
 	float: left;
 	text-align: center;
 	line-height: 45px;
-	/*font-variant: small-caps;*/
 	font-size: 3em;
 	color:  #DBB15B;
 	text-shadow: 0px 1px #af8d48;
-	font-family:Courgette;
+	font-family:Parisienne;
 	font-variant: 400;
 }
 
@@ -70,7 +69,7 @@
 	transition: transform 200ms ease;
 	background-color: white;
 	border-right: 1px solid #504f50;
-	font-family: 'Bree serif';
+	font-family: 'Open sans';
 	font-weight: 400;
 }
 
