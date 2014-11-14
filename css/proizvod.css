@@ -1,0 +1,39 @@
+.product-image {
+	width: 250px;
+	height: 200px;
+	background-image: url('../images/parfem.jpg');
+	background-repeat: no-repeat;
+	margin: 0 auto;
+}
+
+.product-description {
+	width: 100%;
+	height: auto;
+	font-size: 1.2em;
+	text-align: justify;
+}
+
+.product-description h2 {
+	text-align: center;
+	margin-bottom: 10px;
+	
+}
+
+@media all and (min-width: 910px) {
+	.product-image {
+		width: 40%;
+		height: 350px;
+		float: left;
+		background-size: cover;
+	}
+	.product-description h2 {
+		text-align: left;
+	}
+
+	.product-description {
+		width: 60%;
+		height: auto;
+		float: left;
+		margin-top: 30px;
+	}
+}
