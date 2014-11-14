@@ -25,6 +25,8 @@ h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #504f50;
+    font-family: 'Bree serif';
+    font-weight: 200;
 }
 
 h1 span { 
@@ -46,8 +48,9 @@ h1 span {
 
 h2 {
 	font-size: 2em;
-	font-weight: 600;
+	font-weight: 200;
 	font-variant: small-caps;
+	font-family: 'Bree serif';
 }
 
 .wrapper {
