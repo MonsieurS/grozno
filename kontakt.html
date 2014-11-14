@@ -38,7 +38,7 @@
 						<ul><!--
 							--><a href="index.html"><li>Proizvodi</li></a><!--
 							--><a href="#"><li>Blog</li></a><!--
-							--><a href="#"><li>Galerija</li></a><!--s
+							--><a href="galerija.html"><li>Galerija</li></a><!--s
 							--><a href="kontakt.html"><li>Kontakt</li></a><!--
 							-->
 						</ul>
@@ -117,6 +117,15 @@
         var map = new google.maps.Map(mapCanvas, mapOptions)
       }
       google.maps.event.addDomListener(window, 'load', initialize);
+
+		$( document ).ready(function() {
+			$('.open-menu-icon').click(function(){
+			  $('.navigation-links').toggleClass('navigation-links-translate');
+			   $('.navigation-wrapper').toggleClass('navigation-wrapper-translate');
+			});
+		});
+
+
 
 	</script>
 	</body>

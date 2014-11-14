@@ -8,11 +8,12 @@
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link rel="stylesheet" type="text/css" href="css/navigation.css">
+		<link rel="stylesheet" type="text/css" href="css/navigacija.css">
 		<link rel="stylesheet" type="text/css" href="css/footer.css">
 		<link rel="stylesheet" type="text/css" href="css/galerija.css">
+		<link rel="stylesheet" type="text/css" href="css/lightbox.css">
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 
@@ -22,6 +23,7 @@
 		<!-- jQuery source -->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/lightbox.js"></script>
 	</head>
 	<body>
 
@@ -36,10 +38,10 @@
 				<div class="navigation-wrapper">
 					<div class="navigation-links">
 						<ul><!--
-							--><a href="#"><li>Proizvodi</li></a><!--
+							--><a href="index.html"><li>Proizvodi</li></a><!--
 							--><a href="#"><li>Blog</li></a><!--
-							--><a href="#"><li>Galerija</li></a><!--s
-							--><a href="#"><li>Kontakt</li></a><!--
+							--><a href="galerija.html"><li>Galerija</li></a><!--s
+							--><a href="kontakt.html"><li>Kontakt</li></a><!--
 							-->
 						</ul>
 					</div>
@@ -50,39 +52,94 @@
 		<content>
 		<div class="wrapper">
 			<div class="gallery">
-				<ul>
-					<!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					--><li></li><!--
-					-->			
+				<h1>
+			      <span id="left"></span>
+			      <span id="center">Galerija</span>
+			      <span id="right"></span>
+  				</h1>
+				
+					<ul>
+					<li>
+						<a href="#">
+							<figure>
+								<div class="picture 1"><a href="images/parfem.jpg" data-lightbox="image-1"><img src="images/parfem.jpg"></a></div>
+								
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<div class="picture 2"><a href="images/parfem.jpg" data-lightbox="image-1"><img src="images/parfem.jpg"></a></div>
+								
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<div class="picture 3"><a href="images/parfem.jpg" data-lightbox="image-1"><img src="images/parfem.jpg"></a></div>
+								
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<div class="picture 4"><a href="images/parfem.jpg" data-lightbox="image-1"><img src="images/parfem.jpg"></a></div>
+								
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<div class="picture 5"><a href="images/parfem.jpg" data-lightbox="image-1"><img src="images/parfem.jpg"></a></div>
+								
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<div class="picture 6"><a href="images/parfem.jpg" data-lightbox="image-1"><img src="images/parfem.jpg"></a></div>
+								
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<div class="picture 6"><a href="images/parfem.jpg" data-lightbox="image-1"><img src="images/parfem.jpg"></a></div>
+								
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<div class="picture 6"><a href="images/parfem.jpg" data-lightbox="image-1"><img src="images/parfem.jpg"></a></div>
+								
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<div class="picture 6"><a href="images/parfem.jpg" data-lightbox="image-1"><img src="images/parfem.jpg"></a></div>
+								
+							</figure>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<figure>
+								<div class="picture 6"><a href="images/parfem.jpg" data-lightbox="image-1"><img src="images/parfem.jpg"></a></div>
+								
+							</figure>
+						</a>
+					</li>
+
 				</ul>
 			</div>
 		</div>
@@ -105,7 +162,7 @@
 							<h2>newsletter</h2>
 							<form>
 								<input type="email" name="email" placeholder="Vaš email.."><br/>
-								<input type="submit" value="Prihvati">
+								<input type="submit" value="Prijavi se">
 							</form>
 						</div>
 				</div>
@@ -122,6 +179,7 @@
 		$( document ).ready(function() {
 			$('.open-menu-icon').click(function(){
 			  $('.navigation-links').toggleClass('navigation-links-translate');
+			   $('.navigation-wrapper').toggleClass('navigation-wrapper-translate');
 			});
 		});
 

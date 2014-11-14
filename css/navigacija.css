@@ -16,6 +16,11 @@
 
 .open-menu-icon i {
 	line-height: 50px;
+	color: #504f50;
+}
+
+.open-menu-icon i:active, .open-menu-icon i:hover {
+	color: #DBB15B;
 }
 
 .logo {
@@ -62,6 +67,7 @@
 	cursor: auto;
 	transition: transform 200ms ease;
 	background-color: white;
+	border-right: 1px solid #504f50;
 }
 
 .navigation-links-translate {
@@ -80,7 +86,7 @@
 	padding: 10px 0px;
 	margin: 0 10px;
 	font-size: 1.5em;
-	border-bottom: 1px solid grey;
+	border-bottom: 1px solid #504f50;
 	color: #504f50;
 	transition: color 100ms ease;
 }
@@ -140,6 +146,7 @@
 		display: inline-block;
 		text-align: center;
 		transform:translate(0,0);
+		border-right: none;
 	}
 
 	.navigation-links ul {

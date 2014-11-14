@@ -3,7 +3,7 @@
 	height: auto;
 	background: #635A43;
 	z-index: -10;
-	padding: 15px 0;
+	padding: 15px 0 0 0 ;
 }
 
 .social-media, .newsletter {
@@ -45,8 +45,10 @@
 .footer p {
 	font-size: 1.2em;
 	text-align: center;
-	margin: 10px 0;
 	color: #B5B5AE;
+	width: 100%;
+	background-color: #5D553F;
+	padding: 16px;
 }
 
 .newsletter form input[type="email"] {
