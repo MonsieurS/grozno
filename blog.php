@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+                                                                <!DOCTYPE html>
 <html>
 	<head>
 		<title>Parfumeria</title>
@@ -10,15 +10,15 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/navigacija.css">
 		<link rel="stylesheet" type="text/css" href="css/footer.css">
-		<link rel="stylesheet" type="text/css" href="css/kontakt.css">
+		<link rel="stylesheet" type="text/css" href="css/blog.css">
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 		<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 
-		<!-- Google fonts - "Open Sans" -->
+		<!-- Google fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Bree+Serif&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Neuton&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Parisienne&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
 		<!-- jQuery source -->
@@ -50,27 +50,44 @@
 		</navigation>
 
 		<content>
-		<div id="map_canvas"></div>
-		<div class="wrapper">
-				<h1>
-			      <span id="left"></span>
-			      <span id="center">Kontaktirajte nas</span>
-			      <span id="right"></span>
-  				</h1>
-			<div class="contact-form">
 
-				<form method="post" action="mail.php" enctype="text/plain">
+			<div class="wrapper">
+				<div class="blog">
+					<h1>
+				      <span id="left"></span>
+				      <span id="center">Blog</span>
+				      <span id="right"></span>
+					</h1>
 					
-						<input type="name" name="ime"  placeholder="Vaše ime i prezime"  required><br/>
-						<input type="email" id="email" name="email" placeholder="Email@mail.com" required>
-						<textarea name="poruka"  placeholder="Unesite Vašu poruku.."  required></textarea>
-						<br/>
-						<input type="submit" name="submit"  value="Pošalji" class="submit">
-					
-				</form>
+			<!-- BEGIN BLOG PHP WP CODE-->
+<?php 
+/* Short and sweet */
+
+define('WP_USE_THEMES', false);
+require('./blog/wp-blog-header.php');
+?>
+
+<?php
+
+if (have_posts()) :
+   while (have_posts()) :
+      the_post();
+?>
+<br>
+<h2 id="post-<?php the_ID(); ?>">
+<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+<?php the_title(); ?></a></h2>
+
+<small><?php the_time('F jS, Y') ?> <!-- by <?php the_author() ?> --></small>
+   <?php      the_content();
+   endwhile;
+endif;
+
+?>
+<!-- END BLOG PHP WP CODE-->
+				</div>
 			</div>
-			
-		</div>
+
 			
 		</content>
 
@@ -102,29 +119,29 @@
 
 
 
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
 	<script type="text/javascript">
-
-      function initialize() {
-        var mapCanvas = document.getElementById('map_canvas');
-        var mapOptions = {
-          center: new google.maps.LatLng(44.5403, -78.5463),
-          zoom: 8,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(mapCanvas, mapOptions)
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-
 		$( document ).ready(function() {
 			$('.open-menu-icon').click(function(){
 			  $('.navigation-links').toggleClass('navigation-links-translate');
 			   $('.navigation-wrapper').toggleClass('navigation-wrapper-translate');
 			});
+
+		$("#slideshow > div:gt(0)").hide();
+
+		setInterval(function() { 
+		  $('#slideshow > div:first')
+		    .fadeOut(1000)
+		    .next()
+		    .fadeIn(1000)
+		    .end()
+		    .appendTo('#slideshow');
+		},  3000);
 		});
-
-
 
 	</script>
 	</body>
 </html>
+
+                            
+                            

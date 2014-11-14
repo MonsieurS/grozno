@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+                                <!DOCTYPE html>
 <html>
 	<head>
 		<title>Parfumeria</title>
@@ -7,11 +7,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- Stylesheets -->
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link rel="stylesheet" type="text/css" href="css/navigacija.css">
-		<link rel="stylesheet" type="text/css" href="css/footer.css">
-		<link rel="stylesheet" type="text/css" href="css/blog.css">
-		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+		<link rel="stylesheet" type="text/css" href="../css/navigacija.css">
+		<link rel="stylesheet" type="text/css" href="../css/footer.css">
+		<link rel="stylesheet" type="text/css" href="../css/blog.css">
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
 		<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -38,10 +38,10 @@
 				<div class="navigation-wrapper">
 					<div class="navigation-links">
 						<ul><!--
-							--><a href="index.html"><li>Proizvodi</li></a><!--
-							--><a href="blog.html"><li>Blog</li></a><!--
-							--><a href="galerija.html"><li>Galerija</li></a><!--s
-							--><a href="kontakt.html"><li>Kontakt</li></a><!--
+							--><a href="../index.html"><li>Proizvodi</li></a><!--
+							--><a href="../blog.php"><li>Blog</li></a><!--
+							--><a href="../galerija.html"><li>Galerija</li></a><!--s
+							--><a href="../kontakt.html"><li>Kontakt</li></a><!--
 							-->
 						</ul>
 					</div>
@@ -50,14 +50,36 @@
 		</navigation>
 
 		<content>
-
+<!-- BEGIN BLOG PHP WP CODE-->
+ <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<div class="wrapper">
 				<div class="blog">
 					<h1>
 				      <span id="left"></span>
-				      <span id="center">Blog</span>
+				      <span id="center"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></span>
 				      <span id="right"></span>
 					</h1>
+					
+					
+<div id="content" role="main">
+
+    <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+        
+        <small><?php the_time('F jS, Y') ?> <!-- by <?php the_author() ?> --></small>
+
+        <div class="entry">
+            <?php the_content(); ?>
+        </div>
+
+       <br>
+      
+    </div>
+    <?php endwhile; endif; ?>
+
+</div><!-- #content -->
+	<!-- END BLOG PHP WP CODE-->				
+					
+					
 				</div>
 			</div>
 
@@ -115,3 +137,5 @@
 	</script>
 	</body>
 </html>
+
+                            
